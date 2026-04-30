@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // Require a CharacterController component on the object.
@@ -7,6 +8,7 @@ using UnityEngine;
 
 // Place object in a given component bin.
 [AddComponentMenu("Control Script/FPS Input")]
+
 
 public class FPSInput : MonoBehaviour
 {
@@ -20,10 +22,18 @@ public class FPSInput : MonoBehaviour
     [SerializeField, Range(5.0f, 10.0f)] private float _jumpVelocity = 10.0f;
 
     private CharacterController _controller;
+    
+    //CsoundUnity
+    public CsoundUnity CsoundSource;
+    
 
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
+        
+        //CsoundUnity
+        CsoundSource = GetComponent<CsoundUnity>();
+        CsoundSource.SendScoreEvent("i 1 0");
     }
 
     private void Update()
