@@ -2153,10 +2153,10 @@ MonoBehaviour:
   _audioChannelsBufferSize: 32
   _drawCsoundString: 1
   _drawTestScore: 0
-  _drawSettings: 1
+  _drawSettings: 0
   _drawChannels: 1
   _drawAudioChannels: 0
-  _drawPresets: 0
+  _drawPresets: 1
   _drawPresetsLoad: 0
   _drawPresetsSave: 0
   _drawPresetsImport: 0
